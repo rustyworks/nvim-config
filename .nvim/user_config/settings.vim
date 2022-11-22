@@ -120,5 +120,5 @@
   au Filetype gitcommit setlocal spell textwidth=72
 
 " detect HtmlDjango and JSX
-  au BufNewFile,BufRead *.html set filetype=htmldjango
-  au BufNewFile,BufRead *.jsx set filetype=javascript
+  " au BufNewFile,BufRead *.html set filetype=htmldjango
+  " au BufNewFile,BufRead *.jsx set filetype=javascript

@@ -17,10 +17,12 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   " Enable lua plugins
   Plug 'folke/lua-dev.nvim'
 
-  " Syntax highlighting
+  " Tree Sitter
   Plug 'nvim-treesitter/nvim-treesitter'
   " Need manually add language
   " :TSInstall all
+  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+  Plug 'windwp/nvim-ts-autotag'
 
   " For icons
   Plug 'nvim-tree/nvim-web-devicons'
@@ -34,7 +36,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'windwp/nvim-autopairs'
 
   " Commenting
-  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
   Plug 'numToStr/Comment.nvim'
 
   " Notification for nvim
@@ -66,8 +67,11 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'rking/ag.vim'
 
   " EXPERIMENTAL
-  " Plug 'williamboman/mason.nvim'
-  " " https://github.com/williamboman/mason.nvim/blob/main/PACKAGES.md
+  Plug 'williamboman/mason.nvim'
+  Plug 'williamboman/mason-lspconfig.nvim'
+  Plug 'neovim/nvim-lspconfig'
+  " https://github.com/williamboman/mason.nvim/blob/main/PACKAGES.md
+  Plug 'jose-elias-alvarez/null-ls.nvim'
   " Plug 'mfussenegger/nvim-lint'
   " Plug 'mhartington/formatter.nvim'
 call plug#end()
