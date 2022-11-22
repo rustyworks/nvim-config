@@ -147,7 +147,7 @@ lua << EOF
     button("e", "  New File", "<CMD>ene!<CR>"),
     button("t", "  Find File", "<CMD>Telescope find_files<CR>"),
     -- button("p", "  Recent Projects ", "<CMD>Telescope projects<CR>"),
-    button("b", "  Recently Used Files", "<CMD>Telescope oldfiles<CR>"),
+    -- button("b", "  Recently Used Files", "<CMD>Telescope oldfiles<CR>"),
     -- button("f", "  Find Word", "<CMD>Telescope live_grep<CR>"),
     button("c", "  Configuration", "<CMD>edit " .. "~/.nvim" .. " <CR>"),
   }
