@@ -49,14 +49,8 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
   " Auto Complete
   Plug 'ervandew/supertab'
-  " Plug 'neovim/nvim-lspconfig'
-  " Plug 'hrsh7th/cmp-nvim-lsp'
-  " Plug 'hrsh7th/cmp-buffer'
-  " Plug 'hrsh7th/cmp-path'
-  " Plug 'hrsh7th/cmp-cmdline'
-  " Plug 'hrsh7th/nvim-cmp'
 
-" UndoTree
+  " UndoTree
   Plug 'mbbill/undotree'
   map <Leader>h :UndotreeToggle<CR>
   if has("persistent_undo")
@@ -72,6 +66,4 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'neovim/nvim-lspconfig'
   " https://github.com/williamboman/mason.nvim/blob/main/PACKAGES.md
   Plug 'jose-elias-alvarez/null-ls.nvim'
-  " Plug 'mfussenegger/nvim-lint'
-  " Plug 'mhartington/formatter.nvim'
 call plug#end()
