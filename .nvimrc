@@ -17,6 +17,3 @@ endif
 
 " Colorscheme
 colorscheme dracula
-
-" Hack
-set cc=79
