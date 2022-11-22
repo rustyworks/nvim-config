@@ -10,6 +10,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
   " Color themes
   Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
   " Git blame
   Plug 'tpope/vim-fugitive'
@@ -26,6 +27,12 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
   " For icons
   Plug 'nvim-tree/nvim-web-devicons'
+
+  " Tabline
+  Plug  'nanozuki/tabby.nvim'
+
+  " Landing Dashboard
+  Plug 'goolord/alpha-nvim'
 
   " File explorer
   Plug 'nvim-tree/nvim-tree.lua'

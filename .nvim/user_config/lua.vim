@@ -99,6 +99,96 @@ lua << EOF
   require('Comment').setup()
 EOF
 
+"alpha-nvim
+lua << EOF
+  -- require'alpha'.setup(require'alpha.themes.startify'.config)
+
+  local dashboard = require("alpha.themes.dashboard")
+
+  local function button(sc, txt, keybind, keybind_opts)
+      return dashboard.button(sc, txt, keybind, keybind_opts)
+  end
+
+  dashboard.section.header.val = {
+    "                                   ",
+    "                                   ",
+    "                                   ",
+    "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
+    "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
+    "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
+    "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
+    "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
+    "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
+    "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
+    " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
+    " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
+    "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
+    "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
+    "                                   ",
+  }
+  dashboard.section.buttons.val = {
+    button("e", "  New File", "<CMD>ene!<CR>"),
+    button("t", "  Find File", "<CMD>Telescope find_files<CR>"),
+    -- button("p", "  Recent Projects ", "<CMD>Telescope projects<CR>"),
+    button("b", "  Recently Used Files", "<CMD>Telescope oldfiles<CR>"),
+    button("f", "  Find Word", "<CMD>Telescope live_grep<CR>"),
+    button("c", "  Configuration", "<CMD>edit " .. "~/.nvim" .. " <CR>"),
+  }
+
+  require'alpha'.setup(require'alpha.themes.dashboard'.config)
+EOF
+
+"tabline START
+lua << EOF
+  local theme = {
+    -- fill = 'TabLineFill',
+    fill = { fg='#44475a', bg='#282a36'},
+    head = { fg='#44475a', bg='#50fa7b', style='bold' },
+    current_tab = { fg='#44475a', bg='#ff79c6', style='bold' },
+    tab = { fg='#44475a', bg='#6272a4' },
+    win = { fg='#44475a', bg='#ff79c6', style='bold' },
+    tail = { fg='#44475a', bg='#50fa7b', style='bold' },
+  }
+  require('tabby.tabline').set(function(line)
+    return {
+      {
+        { '  ', hl = theme.head },
+        line.sep('', theme.head, theme.fill),
+      },
+      line.tabs().foreach(function(tab)
+        local hl = tab.is_current() and theme.current_tab or theme.tab
+        return {
+          line.sep('', hl, theme.fill),
+          tab.is_current() and '' or '',
+          tab.number(),
+          tab.name(),
+          tab.close_btn(''),
+          line.sep('', hl, theme.fill),
+          hl = hl,
+          margin = ' ',
+        }
+      end),
+      line.spacer(),
+      line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+        return {
+          line.sep('', theme.win, theme.fill),
+          win.is_current() and '' or '',
+          win.buf_name(),
+          line.sep('', theme.win, theme.fill),
+          hl = theme.win,
+          margin = ' ',
+        }
+      end),
+      {
+        line.sep('', theme.tail, theme.fill),
+        { '  ', hl = theme.tail },
+      },
+      hl = theme.fill,
+    }
+  end)
+EOF
+"tabline END
+
 "lualine START
 lua << EOF
   -- Eviline config for lualine
