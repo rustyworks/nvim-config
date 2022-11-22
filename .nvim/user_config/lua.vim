@@ -95,15 +95,6 @@ lua << EOF
   require('Comment').setup()
 EOF
 
-"heirline START
-" lua << EOF
-"   local statusline = {...}
-"   local winbar = {...}
-"   local tabline = {...}
-"   require'heirline'.setup(statusline, winbar, tabline)
-" EOF
-"heirline END
-
 "lualine START
 lua << EOF
   -- Eviline config for lualine
@@ -403,16 +394,15 @@ EOF
 "   --   capabilities = capabilities
 "   -- }
 " EOF
-
-" lua << EOF
-"   require("mason").setup()
-" EOF
-
-" Auto complete for nvim lsp
+" " Auto complete for nvim lsp buffer
 " set completeopt=menu,menuone,noselect
 
 
 " EXPERIMENTAL
+" lua << EOF
+"   require("mason").setup()
+" EOF
+
 " lua << EOF
 "   require('lint').linters_by_ft = {
 "     markdown = {'vale',}

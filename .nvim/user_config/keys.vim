@@ -2,9 +2,6 @@
   nmap <Leader>w :set wrap!<cr>
   nmap <Leader>W :set nowrap<cr>
 
-" swap background light and dark
-  nmap <Leader>x :SwapBackground<cr>
-
 " close all other windows (in the current tab)
   nmap gW :only<cr>
 
@@ -16,14 +13,6 @@
   nmap gs :e db/schema.rb<cr>
   nmap gr :e config/routes.rb<cr>
   " nmap gm :e Gemfile<cr> "Colided with django, let me thing what should I do
-" Django
-  nmap gm :call RelatedFile ("models.py")<cr>
-  nmap gv :call RelatedFile ("views.py")<cr>
-  nmap gu :call RelatedFile ("urls.py")<cr>
-  nmap ga :call RelatedFile ("admin.py")<cr>
-  " nmap gt :call RelatedFile ("tests.py")<cr> " Conflict with change tab
-  " shortcut
-  nmap gs :find settings.py<cr>
 
 " insert blank lines without going into insert mode
   nmap go o<esc>

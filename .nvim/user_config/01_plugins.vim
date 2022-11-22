@@ -45,7 +45,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
   " Cool line (powerline, lualine, heirline)
   Plug 'nvim-lualine/lualine.nvim'
-  " Plug 'rebelot/heirline.nvim'
 
   " Auto Complete
   Plug 'ervandew/supertab'
