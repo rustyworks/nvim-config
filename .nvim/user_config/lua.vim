@@ -112,7 +112,8 @@ lua << EOF
   -- dashboard.section.header.opts.hl = {
   --   {'Directory', 0, 200},
   -- }
-  dashboard.section.header.opts.hl = 'Special'
+  -- dashboard.section.header.opts.hl = 'Special'
+  dashboard.section.header.opts.hl = 'Directory'
   dashboard.section.header.val = {
 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠄⡪⣐⡊⡔⡢⡅⣔⠀⡢⡢⠀⡐⢄⢄⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢔⠀⣖⢼⢼⢼⣸⡲⡽⣕⣙⢐⠵⣵⣲⢬⡠⣇⠄⠅⡀⡀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
@@ -195,16 +196,16 @@ lua << EOF
         }
       end),
       line.spacer(),
-      line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
-        return {
-          line.sep('', theme.win, theme.fill),
-          win.is_current() and '' or '',
-          win.buf_name(),
-          line.sep('', theme.win, theme.fill),
-          hl = theme.win,
-          margin = ' ',
-        }
-      end),
+      -- line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+      --   return {
+      --     line.sep('', theme.win, theme.fill),
+      --     win.is_current() and '' or '',
+      --     win.buf_name(),
+      --     line.sep('', theme.win, theme.fill),
+      --     hl = theme.win,
+      --     margin = ' ',
+      --   }
+      -- end),
       {
         line.sep('', theme.tail, theme.fill),
         { '  ', hl = theme.tail },
