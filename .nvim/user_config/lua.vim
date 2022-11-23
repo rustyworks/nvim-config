@@ -109,6 +109,10 @@ lua << EOF
       return dashboard.button(sc, txt, keybind, keybind_opts)
   end
 
+  -- dashboard.section.header.opts.hl = {
+  --   {'Directory', 0, 200},
+  -- }
+  dashboard.section.header.opts.hl = 'Special'
   dashboard.section.header.val = {
 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠄⡪⣐⡊⡔⡢⡅⣔⠀⡢⡢⠀⡐⢄⢄⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢔⠀⣖⢼⢼⢼⣸⡲⡽⣕⣙⢐⠵⣵⣲⢬⡠⣇⠄⠅⡀⡀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
@@ -153,7 +157,7 @@ lua << EOF
   }
   dashboard.config.layout = {
       dashboard.section.header,
-      { type = "padding", val = 0 },
+      { type = "padding", val = 1 },
       dashboard.section.buttons,
       { type = "padding", val = 0 },
   }
