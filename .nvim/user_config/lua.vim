@@ -463,9 +463,15 @@ lua << EOF
           -- null_ls.builtins.code_actions.xo,
 
           -- null_ls.builtins.diagnostics.eslint,
-          -- null_ls.builtins.diagnostics.flake8,
-          -- null_ls.builtins.diagnostics.jshint,
-          -- null_ls.builtins.diagnostics.tidy,
+          -- null_ls.builtins.diagnostics.flake8.with({
+          --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+          -- }),
+          -- null_ls.builtins.diagnostics.jshint.with({
+          --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+          -- }),
+          -- null_ls.builtins.diagnostics.tidy.with({
+          --   method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+          -- }),
           -- null_ls.builtins.diagnostics.xo,
           -- null_ls.builtins.diagnostics.yamllint,
 
