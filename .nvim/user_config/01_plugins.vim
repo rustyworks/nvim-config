@@ -8,6 +8,12 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   nnoremap <leader>f <cmd>Telescope live_grep<cr>
   nnoremap <leader>b <cmd>Telescope buffers<cr>
 
+  " FZF
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
+  " Project
+  Plug 'nvim-telescope/telescope-project.nvim'
+
   " Color themes
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -47,9 +53,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
   " Notification for nvim
   Plug 'rcarriga/nvim-notify'
-
-  " FZF
-  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   " Cool line (powerline, lualine, heirline)
   Plug 'nvim-lualine/lualine.nvim'
