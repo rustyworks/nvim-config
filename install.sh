@@ -1,3 +1,5 @@
+#!/bin/bash --login
+
 CURRENT_PATH=`pwd`
 
 rm -rf ~/.nvim ~/.nvimrc ~/.config/nvim/
