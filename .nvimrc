@@ -1,4 +1,5 @@
 runtime! user_config/*.vim
+runtime! plugin_config/*.vim
 
 if has('termguicolors')
   set termguicolors
