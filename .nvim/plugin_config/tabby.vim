@@ -45,5 +45,5 @@ lua << EOF
       hl = theme.fill,
     }
   end)
-  vim.o.showtabline = 2
+  -- vim.o.showtabline = 2
 EOF
