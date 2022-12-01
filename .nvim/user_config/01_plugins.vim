@@ -68,7 +68,11 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     " set undofile
   endif
 
+  " Silver Searcher
   Plug 'rking/ag.vim'
+
+  " Python indentation
+  Plug 'Vimjas/vim-python-pep8-indent'
 
   " EXPERIMENTAL
   Plug 'williamboman/mason.nvim'
