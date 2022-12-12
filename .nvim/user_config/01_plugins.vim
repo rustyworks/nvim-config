@@ -71,6 +71,9 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   " Silver Searcher
   Plug 'rking/ag.vim'
 
+  " Multicursor
+  Plug 'mg979/vim-visual-multi'
+
   " Python indentation
   Plug 'Vimjas/vim-python-pep8-indent'
 

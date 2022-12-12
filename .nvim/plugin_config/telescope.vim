@@ -15,6 +15,10 @@ lua << EOF
     -- other configuration values here
   })
 
+  require('telescope.builtin').buffers(
+    { sort_lastused = true, ignore_current_buffer = true }
+  )
+
   local project = require'telescope'.load_extension('project')
   local actions = require("telescope.actions")
 
@@ -29,4 +33,3 @@ lua << EOF
   },
   })
 EOF
-
