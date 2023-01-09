@@ -1,5 +1,6 @@
 # Installation
 
 run `install.sh`
-After that go inside the neovim and run `:TSInstall all` and `:TSUpdate all`
+After that install all plugin using `PlugInstall` then exit
+After that go inside again and run `:TSInstall all` and `:TSUpdate all`
 Wait until installation done
