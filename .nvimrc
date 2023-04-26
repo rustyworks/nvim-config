@@ -16,5 +16,20 @@ if has('nvim')
         " \,sm:block-blinkwait175-blinkoff150-blinkon175
 endif
 
+if has('wsl')
+  let g:clipboard = {
+        \   'name': 'win32yank-wsl',
+        \   'copy': {
+        \      '+': 'win32yank.exe -i --crlf',
+        \      '*': 'win32yank.exe -i --crlf',
+        \    },
+        \   'paste': {
+        \      '+': 'win32yank.exe -o --lf',
+        \      '*': 'win32yank.exe -o --lf',
+        \   },
+        \   'cache_enabled': 0,
+        \ }
+endif
+
 " Colorscheme
 colorscheme dracula
