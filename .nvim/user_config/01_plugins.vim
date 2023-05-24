@@ -1,4 +1,6 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+ " To check plugin location use :echo stdpath('data')
+
   " Dependency telescope
   Plug 'nvim-lua/plenary.nvim'
 
