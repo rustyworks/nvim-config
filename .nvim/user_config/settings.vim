@@ -98,7 +98,7 @@
   set cursorline
 
 " Enable cursor column position tracking:
-  set cursorcolumn
+  " set cursorcolumn
 
 " augment status line
   function! ETry(function, ...)
