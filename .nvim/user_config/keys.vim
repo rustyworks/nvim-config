@@ -1,3 +1,7 @@
+" save and quit using uppercase and lowercase
+  cabb W w
+  cabb Q q
+
 " easy wrap toggling
   nmap <Leader>w :set wrap!<cr>
   nmap <Leader>W :set nowrap<cr>

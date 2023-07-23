@@ -1,10 +1,9 @@
 " Colors used
-" #616060
-" #404040
-" #8f8f8f
-" #f8f8f8
-" #ff8ff8
-" 
+" #616060  " dark grey
+" #404040  " very dark grey (almost black)
+" #8f8f8f  " light grey
+" #f8f8f8  " very light grey (almost white)
+" #ff8ff8  " penk
 
 set background=dark
 
@@ -19,7 +18,7 @@ let g:colors_name="ff8"
 " --------------------------------
 hi Normal          guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi Cursor          guifg=#8f8f8f    guibg=#616060    gui=NONE
-hi CursorLine      guifg=#ff8ff8    guibg=#8f8f8f    gui=NONE
+hi CursorLine      guifg=#404040    guibg=#8f8f8f    gui=NONE
 hi LineNr          guifg=#f8f8f8    guibg=#616060    gui=NONE
 hi CursorLineNR    guifg=#ff8ff8    guibg=#616060    gui=NONE
 
