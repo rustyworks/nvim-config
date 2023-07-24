@@ -32,4 +32,7 @@ if has('wsl')
 endif
 
 " Colorscheme
-colorscheme dracula
+colorscheme ff8
+
+" colorscheme dracula
+" set cursorcolumn

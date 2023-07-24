@@ -1,12 +1,12 @@
 lua << EOF
   local theme = {
     -- fill = 'TabLineFill',
-    fill = { fg='#44475a', bg='#404040'},
-    head = { fg='#44475a', bg='#616060', style='bold' },
-    current_tab = { fg='#44475a', bg='#f8f8f8', style='bold' },
-    tab = { fg='#44475a', bg='#616060' },
-    win = { fg='#44475a', bg='#616060', style='bold' },
-    tail = { fg='#44475a', bg='#616060', style='bold' },
+    fill = { fg='#404040', bg='#404040'},
+    head = { fg='#404040', bg='#616060', style='bold' },
+    current_tab = { fg='#404040', bg='#8f8f8f', style='bold' },
+    tab = { fg='#404040', bg='#616060' },
+    win = { fg='#404040', bg='#616060', style='bold' },
+    tail = { fg='#404040', bg='#616060', style='bold' },
   }
   require('tabby.tabline').set(function(line)
     return {
