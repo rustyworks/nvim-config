@@ -90,13 +90,13 @@ lua << EOF
   dashboard.section.header.opts.hl = 'Directory'
   dashboard.section.header.val = header
   dashboard.section.buttons.val = {
-    button("e", "  New File", "<CMD>ene!<CR>"),
-    button("t", "  Find File", "<CMD>Telescope find_files<CR>"),
-    button("p", "  Recent Projects ", "<CMD>Telescope project<CR>"),
+    button("e", "  New File", "<CMD>ene!<CR>"),
+    button("t", "󰮗  Find File", "<CMD>Telescope find_files<CR>"),
+    button("p", "󰔠  Recent Projects ", "<CMD>Telescope project<CR>"),
     button("b", "  Recently Used Files", "<CMD>Telescope oldfiles<CR>"),
-    button("f", "  Find Word", "<CMD>Telescope live_grep<CR>"),
+    button("f", "  Find Word", "<CMD>Telescope live_grep<CR>"),
     button("c", "  Configuration", "<CMD>edit " .. "~/.nvim" .. " <CR>"),
-    button("q", "  Quit", "<CMD>qa<CR>"),
+    button("q", "󰩈  Quit", "<CMD>qa<CR>"),
   }
   dashboard.config.layout = {
       dashboard.section.header,
