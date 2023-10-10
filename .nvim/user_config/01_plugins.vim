@@ -78,6 +78,10 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   " Python indentation
   Plug 'Vimjas/vim-python-pep8-indent'
 
+  " Rust
+  " Need to install rust-analyzer using `rustup component add rust-analyzer`
+  Plug 'simrat39/rust-tools.nvim'
+
   " Markdown
   " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
   Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
@@ -85,7 +89,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   " EXPERIMENTAL
   Plug 'williamboman/mason.nvim'
   Plug 'williamboman/mason-lspconfig.nvim'
-  Plug 'neovim/nvim-lspconfig'
+  Plug 'neovim/nvim-lspconfig'  " To start using :LspStart
   " https://github.com/williamboman/mason.nvim/blob/main/PACKAGES.md
   Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
